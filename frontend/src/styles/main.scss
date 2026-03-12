@@ -1,0 +1,69 @@
+$color-primary:   #004494;
+$color-secondary: #E63312;
+$color-light:     #F5F5F5;
+$color-dark:      #1A1A1A;
+$color-star:      #FFC107;
+
+@import "bootstrap/scss/bootstrap";
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #fff;
+  color: $color-dark;
+}
+
+.header {
+  background-color: $color-primary;
+  padding: 1rem 0;
+  .nav-link { color: #fff !important; font-weight: 500; &:hover { color: $color-secondary !important; } }
+  .search-input { border-radius: 20px; border: none; padding: 0.4rem 1rem; min-width: 220px; }
+}
+
+.hero {
+  background: linear-gradient(135deg, $color-primary 0%, darken($color-primary, 10%) 100%);
+  color: #fff;
+  padding: 5rem 0;
+  text-align: center;
+  h1 { font-size: 2.5rem; font-weight: 700; }
+  p  { font-size: 1.2rem; opacity: 0.9; }
+}
+
+.steps-section {
+  padding: 4rem 0;
+  background-color: $color-light;
+  .step-card { text-align: center; padding: 2rem; }
+  .step-number {
+    width: 60px; height: 60px; border-radius: 50%;
+    background-color: $color-primary; color: #fff;
+    font-size: 1.5rem; font-weight: 700;
+    display: flex; align-items: center; justify-content: center;
+    margin: 0 auto 1rem;
+  }
+}
+
+.artisan-card {
+  border: none; border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(0,0,0,.08);
+  transition: transform .2s, box-shadow .2s;
+  cursor: pointer; height: 100%;
+  &:hover { transform: translateY(-4px); box-shadow: 0 8px 24px rgba(0,0,0,.15); }
+  .card-img-top { height: 180px; object-fit: cover; border-radius: 12px 12px 0 0; }
+  .badge-specialite {
+    background-color: $color-primary; color: #fff;
+    padding: .3rem .7rem; border-radius: 20px; font-size: .75rem;
+  }
+}
+
+.stars { color: $color-star; font-size: 1.1rem; }
+
+.footer {
+  background-color: $color-dark; color: #ccc; padding: 2.5rem 0;
+  a { color: #ccc; text-decoration: none; &:hover { color: #fff; } }
+  .footer-title { color: #fff; font-weight: 600; margin-bottom: 1rem; }
+}
+
+.not-found {
+  min-height: 70vh; display: flex; align-items: center;
+  justify-content: center; text-align: center;
+  h1 { font-size: 6rem; color: $color-primary; font-weight: 700; }
+}
