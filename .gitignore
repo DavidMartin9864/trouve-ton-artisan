@@ -1,0 +1,12 @@
+# Dépendances
+node_modules/
+
+# Variables d'environnement (contient les mots de passe !)
+backend/.env
+frontend/.env
+
+# Logs
+*.log
+
+# Build
+frontend/dist/
